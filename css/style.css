@@ -195,7 +195,18 @@ input[type="checkbox"]
 {
     background-color: hsl(169, 82%, 22%);
 }
-  
+
+
+fieldset
+{
+    border: none;
+}
+
+.title-sub
+{
+    margin-bottom: 10px;
+}
+
 @media (max-width: 600px) 
 {
     body 
