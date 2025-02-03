@@ -8,76 +8,67 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="contact-form">
-    <h1>contact Us</h1>
+  <main>
+    <div class="confirmation"> 
+      <span>
+        <img src="./assets/images/icon-success-check.svg" alt="icon-success-check">
+        <p>Message Sent</p>
+      </span>
+      <small>Thanks for Thanks for completing the form. We'll be in touch soon!</small>
+    </div>
     
-    <form id="contact-form">
-      <div class="form-item">
-        <div class="first-name">
-          <label for="first-name">First Name <span class="required-input">*</span></label>
-          <input type="text" name="first-name" id="first-name">
-          <p class="form-alert">This field is required</p>
+    <section class="container">
+      <form action="#" class="contact-form" id="contactForm">
+        <h1>Contact Us</h1>
+        
+        <div class="form-group split">  <!-- Name Part -->
+          <span class="name-span">
+            <label for="firstName">First Name <p class="star">*</p></label>
+            <input type="text" id="firstName" name="firstName"/>
+            <p class="error-message">This field is required</p>
+          </span>
+          
+          <span class="name-span">
+            <label for="lastName">Last Name <p class="star">*</p></label>
+            <input type="text" id="lastName" name="lastName"/>
+            <p class="error-message">This field is required</p>
+          </span>
         </div>
-
-        <div class="last-name">
-          <label for="last-name">Last Name <span class="required-input">*</span></label>
-          <input type="text" name="last-name" id="last-name">
-          <p class="form-alert">This field is required</p>
+        
+        <div class="form-group"> <!-- Email Address -->
+          <label for="email">Email Address <p class="star">*</p></label>
+          <input type="email" id="email" name="email" />
+          <p class="error-message">Please enter a valid email address</p>
         </div>
+        
+        <div class="form-group"> <!-- queryType -->
+          <label for="queryType">Query Type <p class="star">*</p></label>
+          <div class="radio-group">
+            <label><input type="radio" name="queryType" value="General Enquiry"/>General Enquiry</label>
+          <label><input type="radio" name="queryType" value="Support Request" />Support Request</label>
+        </div>
+        
+        <p class="error-message">Please select a query type</p>
+      
       </div>
       
-      <div class="form-item">
-        <label for="emial">Email Address <span class="required-input">*</span></label>
-        <input type="email" name="email" id="email">
-        <p class="form-alert">Please enter a valid email address</p>
+      <div class="form-group">  <!-- Message -->
+        <label for="message">Message <p class="star">*</p></label>
+        <textarea id="message" name="message" rows="3" ></textarea>
+        <p class="error-message">This field is required</p>
       </div>
-
-      <div class="form-item">
-        <label for="query-type">Query Type <span class="required-input">*</span></label>
-
-        <div class="radio-inputs">
-          <div class="radio-option">
-            <input type="radio" id="general-enquiry" name="query-type" value="General Enquiry">
-            <label for="general-enquiry">General Enquiry</label>
-          </div>
-
-          <div class="radio-option">
-            <input type="radio" id="support-request" name="query-type" value="Support Request">
-            <label for="support-request">Support Request</label>
-          </div>
-        </div>
-
-        <p class="form-alert">Please select a query type</p>
+      
+      <div class="form-group"> <!-- checkbox -->
+        <label><input type="checkbox" id="consent" name="consent" > I consent to being contacted by the team <p class="star">*</p></label>
+        <p class="error-message">To submit this form, please consent to being contacted</p>
       </div>
-
-      <div class="form-tiem">
-        <label for="message">Message <span class="required-input">*</span></label>
-        <textarea name="message" id="message" rows="4"></textarea>
-        <p class="form-alert">This field is required</p>
-      </div>
-
-      <div class="form-item">
-        <div>
-          <input type="checkbox" name="consent" id="consent">
-          <label for="consent">I consent to being contacted by the team <span class="required-input">*</span></label>
-        </div>
-
-        <p class="form-alert">To submit this form, please consent to being contacted</p>
-      </div>
-
-      <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+      
+      <button type="submit" class="submit-btn" id="btn">Submit</button> <!-- Button  -->
     </form>
-  </div>
-
-  <div id="success-message" class="success-message">
-    <div class="message-header">
-      <img src="images/icon-success-check.svg" alt="">
-      Message Sent!
-    </div>
-
-    <p>Thanks for completing the form. We'll be in touch soon!</p>
-  </div>
-
+  </section>
+  </main>
+  
+  <footer class="attribution"> Challenge by Frontend Mentor. Coded by <a href="twitter.com/mizrmx">Mayra Zurita</a></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
